@@ -20,7 +20,7 @@ resource "null_resource" "backend" {
     type     = "ssh"
     user     = "ec2-user"
     password = "DevOps321"
-    host     = aws_instance.backend.public_ip
+    host     = aws_instance.backend.private_ip
   }
 
   provisioner "file" {
