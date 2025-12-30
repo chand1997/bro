@@ -7,7 +7,7 @@ module "alb" {
   create_security_group      = false
   enable_deletion_protection = false
   internal                   = false
-  security_groups            = [var.sg_web_alb_id]
+  security_groups            = [local.sg_web_alb_id]
   tags                       = merge({ Name = "${var.project_name}-${var.environment}-web-alb" }, var.common_tags)
 
 }
